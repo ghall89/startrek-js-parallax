@@ -5,6 +5,7 @@ body {
 .parallax img {
 	position: absolute;
 	top: 0;
-	left: -10%;
-	height: 110vh;
+	left: 0;
+	min-height: 110vh;
+	min-width: 110%;
 }
