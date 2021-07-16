@@ -5,7 +5,23 @@ body {
 .parallax img {
 	position: absolute;
 	top: 0;
-	left: 0;
+	right: -10%;
 	min-height: 110vh;
 	min-width: 110%;
+}
+
+@media screen and (max-width: 1060px) {
+	.parallax img {
+		right: -30%;
+	}
+}
+@media screen and (max-width: 790px) {
+	.parallax img {
+		right: -50%;
+	}
+}
+@media screen and (max-width: 600px) {
+	.parallax img {
+		right: -90%;
+	}
 }
