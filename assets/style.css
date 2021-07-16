@@ -12,6 +12,11 @@ body {
 
 @media screen and (max-width: 1060px) {
 	.parallax img {
+		right: -20%;
+	}
+}
+@media screen and (max-width: 946px) {
+	.parallax img {
 		right: -30%;
 	}
 }
@@ -23,5 +28,8 @@ body {
 @media screen and (max-width: 600px) {
 	.parallax img {
 		right: -90%;
+	}
+	#planet_layer {
+		right: -130%;
 	}
 }

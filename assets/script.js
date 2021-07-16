@@ -5,11 +5,7 @@ const planetScale = 90;
 const background = document.querySelector('#background');
 const bgScale = 140;
 
-document.addEventListener('mousemove', e => {
-	const x = e.clientX;
-	const y = e.clientY;
-	console.log([x, y]);
-
+const parallax = (x, y) => {
 	enterprise.style.transform = `translate(${(0 - x) / entScale}px, ${
 		(0 - y) / entScale
 	}px)`;
@@ -19,4 +15,18 @@ document.addEventListener('mousemove', e => {
 	background.style.transform = `translate(${(0 - x) / bgScale}px, ${
 		(0 - y) / bgScale
 	}px)`;
+};
+
+document.addEventListener('mousemove', e => {
+	const x = e.clientX;
+	const y = e.clientY;
+
+	parallax(x, y);
+});
+
+window.addEventListener('deviceorientation', e => {
+	const a = e.alpha * 3;
+	const b = e.beta * 3;
+
+	parallax(a, b);
 });
